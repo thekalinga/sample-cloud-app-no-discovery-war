@@ -1,0 +1,19 @@
+server:
+  port: 81
+
+logging:
+  level:
+    feign: DEBUG
+    com.netflix: DEBUG
+
+ribbon:
+  eureka:
+   enabled: false
+
+sample-service-default-context:
+  ribbon:
+    listOfServers: http://localhost:82/
+
+sample-service-non-default-context:
+  ribbon:
+    listOfServers: http://localhost:8080/sample-service-non-default-context/

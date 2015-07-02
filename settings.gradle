@@ -1,3 +1,3 @@
-rootProject.name = 'sample-cloud-app-no-discovery'
+rootProject.name = 'sample-cloud-app-no-discovery-war'
 
 include 'gateway', 'service-default-context', 'service-non-default-context'

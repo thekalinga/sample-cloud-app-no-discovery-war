@@ -1,9 +1,9 @@
 buildscript {
     repositories {
         jcenter()
-		maven {
-			url "http://repo.spring.io/milestone"
-		}
+        maven {
+            url "http://repo.spring.io/milestone"
+        }
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
@@ -11,26 +11,26 @@ buildscript {
 }
 
 allprojects {
-	group 'com.acme'
-	version '1.0-SNAPSHOT'
+    group 'com.acme'
+    version '1.0-SNAPSHOT'
 }
 
 subprojects {
-	apply plugin: 'java'
-	
-	sourceCompatibility = 1.8
-	targetCompatibility = 1.8
+    apply plugin: 'java'
 
-	repositories {
-		jcenter()
-		maven {
-			url "http://repo.spring.io/milestone"
-		}
-	}
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 
-	task allDeps(type: DependencyReportTask) {}
+    repositories {
+        jcenter()
+        maven {
+            url "http://repo.spring.io/milestone"
+        }
+    }
+
+    task allDeps(type: DependencyReportTask) {}
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '2.4'
+    gradleVersion = '2.4'
 }
